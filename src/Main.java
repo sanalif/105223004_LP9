@@ -7,13 +7,13 @@ public class Main {
             new BankTransfer()
         };
 
-        // Tanpa menyebut mata uang (overriding)
+        // overriding
         System.out.println("=== Pembayaran Default ===");
         for (PaymentMethod method : methods) {
-            method.processPayment(500_000); // IDR default
+            method.processPayment(500_000); 
         }
 
-        // Dengan menyebut mata uang (overloading)
+        // overloading
         System.out.println("\n=== Pembayaran dengan Mata Uang ===");
         for (PaymentMethod method : methods) {
             method.processPayment(100.0, "USD");
